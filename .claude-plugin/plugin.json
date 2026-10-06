@@ -1,0 +1,13 @@
+{
+  "name": "seogeoaeo",
+  "version": "1.0.0",
+  "description": "Check any public site for SEO, AEO and GEO readiness and get ranked fixes your agent can apply.",
+  "author": {
+    "name": "seogeoaeo.ai",
+    "url": "https://seogeoaeo.ai"
+  },
+  "homepage": "https://seogeoaeo.ai/agents",
+  "repository": "https://github.com/seogeoaeo/seogeoaeo-mcp",
+  "license": "MIT",
+  "keywords": ["seo", "aeo", "geo", "ai-search", "llms-txt", "structured-data", "robots-txt", "core-web-vitals", "mcp"]
+}

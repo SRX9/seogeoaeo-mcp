@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.seogeoaeo/mcp",
+  "title": "seogeoaeo.ai",
+  "description": "Check any public site for SEO, AEO and GEO readiness and get ranked fixes your agent can apply.",
+  "version": "1.0.0",
+  "websiteUrl": "https://seogeoaeo.ai/agents",
+  "repository": {
+    "url": "https://github.com/seogeoaeo/seogeoaeo-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://seogeoaeo.ai/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token. Create a key at https://seogeoaeo.ai/api-keys, then send \"Bearer sga_...\".",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

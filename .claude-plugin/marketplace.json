@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "seogeoaeo",
+  "owner": {
+    "name": "seogeoaeo.ai",
+    "url": "https://seogeoaeo.ai"
+  },
+  "plugins": [
+    {
+      "name": "seogeoaeo",
+      "source": "./",
+      "description": "Check any public site for SEO, AEO and GEO readiness and get ranked fixes your agent can apply.",
+      "version": "1.0.0",
+      "category": "development",
+      "homepage": "https://seogeoaeo.ai/agents"
+    }
+  ]
+}

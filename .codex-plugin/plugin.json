@@ -1,0 +1,27 @@
+{
+  "name": "seogeoaeo",
+  "version": "1.0.0",
+  "description": "Check any public site for SEO, AEO and GEO readiness and get ranked fixes your agent can apply.",
+  "author": {
+    "name": "seogeoaeo.ai",
+    "url": "https://seogeoaeo.ai"
+  },
+  "homepage": "https://seogeoaeo.ai/agents",
+  "repository": "https://github.com/seogeoaeo/seogeoaeo-mcp",
+  "license": "MIT",
+  "keywords": ["seo", "aeo", "geo", "ai-search", "mcp"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "seogeoaeo.ai",
+    "shortDescription": "SEO, AEO & GEO checks",
+    "longDescription": "Run single-purpose SEO, AEO and GEO checks on any public website, then apply the ranked fixes and re-run to verify. Covers indexing, robots.txt and AI crawlers, structured data, rendering, Core Web Vitals, llms.txt and AI answer visibility.",
+    "developerName": "seogeoaeo.ai",
+    "category": "Developer Tools",
+    "websiteURL": "https://seogeoaeo.ai",
+    "privacyPolicyURL": "https://seogeoaeo.ai/privacy",
+    "termsOfServiceURL": "https://seogeoaeo.ai/terms",
+    "composerIcon": "./assets/logo.svg",
+    "logo": "./assets/logo.svg"
+  }
+}

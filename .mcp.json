@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "seogeoaeo": {
+      "type": "http",
+      "url": "https://seogeoaeo.ai/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${SEOGEOAEO_API_KEY}"
+      }
+    }
+  }
+}

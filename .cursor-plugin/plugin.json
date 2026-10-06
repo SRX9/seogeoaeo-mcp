@@ -1,0 +1,29 @@
+{
+  "name": "seogeoaeo",
+  "displayName": "seogeoaeo.ai",
+  "version": "1.0.0",
+  "description": "Check any public site for SEO, AEO and GEO readiness and get ranked fixes your agent can apply.",
+  "author": {
+    "name": "seogeoaeo.ai",
+    "url": "https://seogeoaeo.ai"
+  },
+  "homepage": "https://seogeoaeo.ai/agents",
+  "repository": "https://github.com/seogeoaeo/seogeoaeo-mcp",
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "keywords": ["seo", "aeo", "geo", "ai-search", "llms-txt", "structured-data", "robots-txt", "core-web-vitals", "mcp"],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json",
+  "variables": {
+    "type": "object",
+    "required": ["SEOGEOAEO_API_KEY"],
+    "properties": {
+      "SEOGEOAEO_API_KEY": {
+        "type": "string",
+        "title": "seogeoaeo.ai API key",
+        "description": "Create a key at https://seogeoaeo.ai/api-keys. Keys start with sga_.",
+        "secret": true
+      }
+    }
+  }
+}
