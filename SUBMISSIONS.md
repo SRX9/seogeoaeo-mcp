@@ -9,7 +9,7 @@ site's current form before you paste.
 | Field | Value |
 |-------|-------|
 | Name | seogeoaeo.ai |
-| Slug / server name | `seogeoaeo` (registry: `ai.seogeoaeo/mcp`) |
+| Slug / server name | `seogeoaeo` (registry: `io.github.SRX9/seogeoaeo`) |
 | Tagline (98 chars) | Research competitors, keywords and ads, and check any site for SEO, AEO and GEO with ranked fixes. |
 | Short description | SEO research and site checks |
 | Category | Developer Tools (or Marketing / SEO where offered) |
@@ -46,10 +46,9 @@ sync from it, so do this first.
 
 - File: [`server.json`](server.json)
 - Tool: `mcp-publisher` from https://github.com/modelcontextprotocol/registry
-- Namespace `ai.seogeoaeo/*` needs domain proof: `mcp-publisher login dns`
-  (TXT record on seogeoaeo.ai) or `mcp-publisher login http` (serve
-  `/.well-known/mcp-registry-auth`). The quicker route is renaming the server to
-  `io.github.<github-user-or-org>/seogeoaeo` and using `mcp-publisher login github`.
+- The server is named `io.github.SRX9/seogeoaeo`, so `mcp-publisher login github`
+  is enough. A domain name such as `ai.seogeoaeo/mcp` would need DNS or HTTP
+  proof of seogeoaeo.ai instead.
 - Then `mcp-publisher publish`. Bump `version` for every later publish.
 
 ## 2. Claude
