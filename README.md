@@ -43,7 +43,7 @@ claude mcp add --transport http --scope user seogeoaeo https://seogeoaeo.ai/api/
 Or install the plugin, which adds the MCP server and the skill together:
 
 ```bash
-claude plugin marketplace add seogeoaeo/seogeoaeo-mcp
+claude plugin marketplace add SRX9/seogeoaeo-mcp
 claude plugin install seogeoaeo@seogeoaeo
 ```
 

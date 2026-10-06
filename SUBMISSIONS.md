@@ -25,7 +25,7 @@ site's current form before you paste.
 | Privacy | https://seogeoaeo.ai/privacy |
 | Terms | https://seogeoaeo.ai/terms |
 | Support | https://seogeoaeo.ai/contact |
-| Repository | https://github.com/seogeoaeo/seogeoaeo-mcp |
+| Repository | https://github.com/SRX9/seogeoaeo-mcp |
 | Logo | `assets/logo.svg`, `assets/logo-512.png`, `assets/logo-400.png` |
 | Pricing | Paid. Plans from $29/month for 2,000 credits; each tool costs 3 to 160 credits. |
 
@@ -55,7 +55,7 @@ sync from it, so do this first.
 ## 2. Claude
 
 - **Claude Code plugin marketplace (works today):** this repo is the
-  marketplace. Users run `claude plugin marketplace add seogeoaeo/seogeoaeo-mcp`.
+  marketplace. Users run `claude plugin marketplace add SRX9/seogeoaeo-mcp`.
   Files: [`.claude-plugin/`](.claude-plugin/), [`.mcp.json`](.mcp.json),
   [`skills/`](skills/).
 - **Anthropic's plugin directory and connectors directory:** submit through
@@ -105,7 +105,7 @@ sync from it, so do this first.
 
 - The skill is at [`skills/seogeoaeo/SKILL.md`](skills/seogeoaeo/SKILL.md).
   skills.sh lists skills that people install with
-  `npx skills add seogeoaeo/seogeoaeo-mcp`, so share that command on `/agents`
+  `npx skills add SRX9/seogeoaeo-mcp`, so share that command on `/agents`
   and in launch posts.
 
 ## Keeping this repo current
