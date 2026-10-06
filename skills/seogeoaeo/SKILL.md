@@ -1,6 +1,6 @@
 ---
 name: seogeoaeo
-description: Check a public website's SEO, answer readiness and AI visibility with the seogeoaeo.ai API, then fix what it finds and re-run to verify. Use when the user asks to audit or improve a site or page for search engines or AI assistants (indexing, robots.txt, redirects, titles, headings, structured data, content clarity, authorship, rendering, Core Web Vitals, sitemaps, hreflang), to sample how ChatGPT, Perplexity and Gemini answer about their brand, or to research keywords and generate JSON-LD.
+description: Research competitors, keywords, ads and AI citations, and check a public website's SEO, answer readiness and AI visibility with the seogeoaeo.ai API, then fix what it finds and re-run to verify. Use when the user asks to find competitors, size up a domain, see a site's backlinks, see what a competitor ranks for or the keywords it wins that they miss, get search volume, difficulty and cost per click for keywords, see the Google, Facebook, Instagram or LinkedIn ads competitors run, see which pages Google AI Overviews and ChatGPT cite, audit or improve a site or page for search engines or AI assistants (indexing, robots.txt, redirects, titles, headings, structured data, content clarity, authorship, rendering, Core Web Vitals, sitemaps, hreflang), sample how ChatGPT, Perplexity and Gemini answer about their brand, or generate JSON-LD.
 ---
 
 # seogeoaeo.ai tools
@@ -65,7 +65,7 @@ When the user asks to check a site and improve it:
    - When the user asks whether AI browsers and agents can use the site: `ai-agent-readiness`.
    - When changed URLs should be announced to Bing and other IndexNow engines: `indexnow-checker`.
 4. AI answer sampling: `ai-answer-visibility` costs 120 credits per run, `brand-narrative-check` costs 150 credits per run, `fanout-coverage-checker` costs 95 credits per run. Run these only when the user asks how AI assistants answer questions about the market or describe the brand, and agree on the exact questions first. Results are sampled observations that can change between runs; never report them as verified site improvements.
-5. Run input-driven tools only when there is input for them, such as a target query, a keyword list, a log file, or markup to generate: `http-status-bulk-checker`, `keyword-ideas`, `keyword-clusterer`, `keyword-deduplicator`, `schema-markup-generator`, `organization-entity-markup-builder`, `faq-schema-builder`, `breadcrumb-schema-builder`, `llms-txt-generator`, `ai-bot-log-analyzer`, `question-finder`.
+5. Run input-driven tools only when there is input for them, such as a target query, a keyword list, a log file, or markup to generate: `competitor-finder`, `domain-overview`, `backlink-finder`, `competitor-keywords`, `keyword-gap`, `keyword-research`, `keyword-metrics`, `competitor-google-ads`, `meta-ad-finder`, `linkedin-ad-finder`, `ai-citation-finder`, `ai-question-finder`, `http-status-bulk-checker`, `keyword-ideas`, `keyword-clusterer`, `keyword-deduplicator`, `schema-markup-generator`, `organization-entity-markup-builder`, `faq-schema-builder`, `breadcrumb-schema-builder`, `llms-txt-generator`, `ai-bot-log-analyzer`, `question-finder`.
 6. Work through each run's tips from high to low. Find the code, template, config, or content that produces each affected URL or item, and make the change `action` describes. Do not invent facts, reviews, prices, or contact details to satisfy a tip.
 7. When a tip has `fixIn`, or otherwise needs a change outside the codebase such as DNS, CDN, or hosting settings, tell the user exactly what to change.
 8. Deploy, then check again. Tools only fetch public URLs, so they see a change once it is live. For an assessment, run a new one on the same URL: it is compared with the previous one automatically, and `progress` gives `percentFixed` with the counts of `fixed`, `stillPresent` and `new` issues. For a single tool, run the same tool with the same input; a tip whose `id` no longer appears is fixed. Repeat until `status` is `clean` or the remaining tips need the user.
@@ -83,6 +83,16 @@ Start with the narrowest tool that answers the question. For a general site chec
 
 | Tool | Credits | Inputs | What it does |
 | --- | --- | --- | --- |
+| `competitor-finder` | 38 | url (required), market | See which sites compete with yours in Google, so you know whose keywords to study. |
+| `domain-overview` | 50 | url (required), market | Size up any website, yours or a competitor's, by its Google rankings and its links before you decide what to copy or beat. |
+| `backlink-finder` | 70 | url (required) | See which sites link to a competitor, or to you, so you know who to ask for a link and which links are worth matching. |
+| `competitor-keywords` | 35 | url (required), market | See what a competitor ranks for in Google, then pick blog topics and ad keywords from it. |
+| `keyword-gap` | 85 | url (required), competitor (required), market | See the keywords a competitor wins in Google that your site misses, then pick blog topics and ad keywords from them. |
+| `keyword-research` | 34 | keyword (required), market | Turn one keyword or topic into a list of related Google searches with the data to choose blog topics and ad keywords. |
+| `keyword-metrics` | 33 | keywords (required), market | Rank a keyword list you already have by search volume, difficulty and ad cost, so you know which to write about or bid on first. |
+| `competitor-google-ads` | 15 | url (required), market | See what a competitor says in its Google ads, and which ads it keeps paying for, so you can write stronger ones. |
+| `meta-ad-finder` | 5 | query (required), mode, market | See the Facebook and Instagram ads your competitors keep running, and the wording and offers behind them. |
+| `linkedin-ad-finder` | 5 | company (required), market | See what a company says in its LinkedIn ads, which ones it keeps running, and which ad types it relies on. |
 | `indexing-checker` | 8 | url (required) | See whether Google and Bing may crawl, index and quote a page in search and AI answers, which signal blocks it, and the exact tag or header to change. |
 | `robots-checker` | 10 | url (required), path, userAgent | See every robots.txt rule that blocks search or AI crawlers, the rule that matches a given path, and the exact line to change. |
 | `redirects-headers-checker` | 10 | url (required) | See every redirect hop, duplicate host version and response header that costs crawl budget or blocks indexing, with the server rule to change. |
@@ -123,6 +133,8 @@ Start with the narrowest tool that answers the question. For a general site chec
 
 | Tool | Credits | Inputs | What it does |
 | --- | --- | --- | --- |
+| `ai-citation-finder` | 160 | mode, query (required), platform, market | Find the pages AI answers quote, so you know what to write, what to keep current, and which sites to get mentioned on. |
+| `ai-question-finder` | 160 | mode, query (required), platform, market | Find the questions AI answers respond to, so you know what to write and which pages the answers lean on. |
 | `ai-agent-readiness` | 10 | url (required), llmsTxt | Check whether AI browsers and agents can read and use a site, with each page attribute, llms.txt line or discovery file to fix. |
 | `llms-txt-generator` | 15 | url (required), site | Get a draft llms.txt built only from pages this run could fetch, ready to edit and publish. |
 | `citability-analyzer` | 5 | url (required) | Find passages that may need clearer answers or context, with suggestions to review before editing. |

@@ -2,7 +2,7 @@
   "name": "seogeoaeo",
   "displayName": "seogeoaeo.ai",
   "version": "1.0.0",
-  "description": "Check any public site for SEO, AEO and GEO readiness and get ranked fixes your agent can apply.",
+  "description": "Research competitors, keywords and ads, and check any site for SEO, AEO and GEO with ranked fixes.",
   "author": {
     "name": "seogeoaeo.ai",
     "url": "https://seogeoaeo.ai"
@@ -11,12 +11,29 @@
   "repository": "https://github.com/seogeoaeo/seogeoaeo-mcp",
   "license": "MIT",
   "logo": "assets/logo.svg",
-  "keywords": ["seo", "aeo", "geo", "ai-search", "llms-txt", "structured-data", "robots-txt", "core-web-vitals", "mcp"],
+  "keywords": [
+    "seo",
+    "aeo",
+    "geo",
+    "ai-search",
+    "competitor-research",
+    "keyword-research",
+    "backlinks",
+    "ad-research",
+    "ai-citations",
+    "llms-txt",
+    "structured-data",
+    "robots-txt",
+    "core-web-vitals",
+    "mcp"
+  ],
   "skills": "./skills/",
   "mcpServers": "./mcp.json",
   "variables": {
     "type": "object",
-    "required": ["SEOGEOAEO_API_KEY"],
+    "required": [
+      "SEOGEOAEO_API_KEY"
+    ],
     "properties": {
       "SEOGEOAEO_API_KEY": {
         "type": "string",

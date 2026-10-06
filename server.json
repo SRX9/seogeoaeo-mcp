@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "ai.seogeoaeo/mcp",
   "title": "seogeoaeo.ai",
-  "description": "Check any public site for SEO, AEO and GEO readiness and get ranked fixes your agent can apply.",
+  "description": "Research competitors, keywords and ads, and check any site for SEO, AEO and GEO with ranked fixes.",
   "version": "1.0.0",
   "websiteUrl": "https://seogeoaeo.ai/agents",
   "repository": {

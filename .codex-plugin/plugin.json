@@ -1,7 +1,7 @@
 {
   "name": "seogeoaeo",
   "version": "1.0.0",
-  "description": "Check any public site for SEO, AEO and GEO readiness and get ranked fixes your agent can apply.",
+  "description": "Research competitors, keywords and ads, and check any site for SEO, AEO and GEO with ranked fixes.",
   "author": {
     "name": "seogeoaeo.ai",
     "url": "https://seogeoaeo.ai"
@@ -9,13 +9,28 @@
   "homepage": "https://seogeoaeo.ai/agents",
   "repository": "https://github.com/seogeoaeo/seogeoaeo-mcp",
   "license": "MIT",
-  "keywords": ["seo", "aeo", "geo", "ai-search", "mcp"],
+  "keywords": [
+    "seo",
+    "aeo",
+    "geo",
+    "ai-search",
+    "competitor-research",
+    "keyword-research",
+    "backlinks",
+    "ad-research",
+    "ai-citations",
+    "llms-txt",
+    "structured-data",
+    "robots-txt",
+    "core-web-vitals",
+    "mcp"
+  ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "seogeoaeo.ai",
-    "shortDescription": "SEO, AEO & GEO checks",
-    "longDescription": "Run single-purpose SEO, AEO and GEO checks on any public website, then apply the ranked fixes and re-run to verify. Covers indexing, robots.txt and AI crawlers, structured data, rendering, Core Web Vitals, llms.txt and AI answer visibility.",
+    "shortDescription": "SEO research and site checks",
+    "longDescription": "Research competitors, keywords, ads and AI citations, and run SEO, AEO and GEO checks on any public website, then apply the ranked fixes and re-run to verify. Find competitors, see their backlinks, rankings and keyword gaps, get search volume and difficulty, see the Google, Facebook, Instagram and LinkedIn ads they run, and see which pages AI Overviews and ChatGPT cite. Site checks cover indexing, robots.txt and AI crawlers, structured data, rendering, Core Web Vitals, llms.txt and AI answer visibility.",
     "developerName": "seogeoaeo.ai",
     "category": "Developer Tools",
     "websiteURL": "https://seogeoaeo.ai",
